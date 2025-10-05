@@ -25,9 +25,6 @@ You can configure the component to use one of two item approaches:
 | **Instanced Item** | Creates a unique instance of the item at runtime. Useful for items with unique states (e.g., durability, modifiers). |
 | **Authored Item**  | References a predefined item asset. Useful for static, data-driven items shared across actors.                       |
 
-![](Images/ItemComponent/InstancedItemComponent.png)
-
-![](Images/ItemComponent/AuthoredItemComponent.png)
 
 ---
 
@@ -47,7 +44,6 @@ if (ItemComp)
 }
 ```
 
-![](Images/ItemComponent/AddItemComponent.png)
 
 ---
 
