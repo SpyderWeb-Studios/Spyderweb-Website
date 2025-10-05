@@ -26,6 +26,7 @@ export default defineConfig({
         text: 'Components',
         items: [
           { text: 'Inventory Component', link: '/Plugin-Documentation/InventoryPlugin/Components/InventoryComponent' },
+          { text: 'Interaction Component', link: '/Plugin-Documentation/InventoryPlugin/Components/InteractionComponent' },
           { text: 'Item Component', link: '/Plugin-Documentation/InventoryPlugin/Components/ItemComponent' },
         //  { text: 'Interaction Component', link: '/InventoryPlugin/Components/InteractionComponent' }
         ]
@@ -34,7 +35,7 @@ export default defineConfig({
         text: 'Interfaces',
         items: [
          { text: 'Inventory Item Interface', link: '/Plugin-Documentation/InventoryPlugin/Interfaces/InventoryItemInterface' },
-         // { text: 'Interaction Interface', link: '/InventoryPlugin/Interfaces/InteractionInterface' }
+          { text: 'Interaction Interface', link: '/Plugin-Documentation/InventoryPlugin/Interfaces/InteractionInterface' }
         ]
       },
       {
