@@ -1,7 +1,7 @@
 # `FInventorySlot`
 
 > Represents a single **slot in an inventory**, holding an item reference and quantity.
-> Works with [`FInventoryArray`](FInventoryArray.md) for replication and change tracking.
+> Works with `FInventoryArray` for replication and change tracking.
 
 ---
 

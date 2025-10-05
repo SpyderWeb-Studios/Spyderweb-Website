@@ -12,7 +12,7 @@ sidebar_label: 'Inventory Object Base'
 
 `UInventoryObjectBase` serves as the **foundation** for all items used within the Inventory Plugin.
 It defines the core metadata (name, description, icon, stack size) and provides default implementations
-for the [`IInventoryItemInterface`](../Interfaces/InventoryItemInterface.md)
+for the `IInventoryItemInterface`.
 
 ---
 
@@ -56,8 +56,8 @@ public:
 
 ### Inheritance
 
-* **Parent Class:** [`UObject`](https://docs.unrealengine.com/5.3/en-US/API/Runtime/CoreUObject/UObject/UObject/)
-* **Implements:** [`IInventoryItemInterface`](../Interfaces/InventoryItemInterface.md)
+* **Parent Class:** `UObject`
+* **Implements:** `IInventoryItemInterface`
 
 ### Specifiers
 
@@ -143,7 +143,6 @@ virtual EDataValidationResult IsDataValid(FDataValidationContext& Context) const
 
 ## Example Blueprint Setup
 
-![](Images/InventoryObject/InventoryObjectBlueprint.png)
 
 1. Create a new **Blueprint Class** derived from `UInventoryObjectBase`.
 2. Fill in the `Item Name`, `Description`, and `Icon`.
@@ -155,24 +154,21 @@ virtual EDataValidationResult IsDataValid(FDataValidationContext& Context) const
 
 To instance an Inventory Object, simply open the context menu like any other asset.
 
-![](Images/InventoryObject/InventoryObjectInstance.png)
 
 Select a class that you would like to use for the Inventory Object.
 
-![](Images/InventoryObject/InventoryObject_PickClass.png)
 
 Then add in data.
 
-![](Images/InventoryObject/InventoryObject_InstanceBP.png)
 
 
 ## Integration
 
 `UInventoryObjectBase` interacts seamlessly with:
 
-* [`UItemComponent`](../Components/ItemComponent.md): wraps this object on an actor.
-* [`UInventoryComponentBase`](../Components/InventoryComponent.md): manages stacking, transfer, and replication.
-* [`IInventoryItemInterface`](../Interfaces/InventoryItemInterface.md): defines item behavior when used, dropped, or transferred.
+* `UItemComponent`: wraps this object on an actor.
+* `UInventoryComponentBase`: manages stacking, transfer, and replication.
+* `IInventoryItemInterface`: defines item behavior when used, dropped, or transferred.
 
 ---
 

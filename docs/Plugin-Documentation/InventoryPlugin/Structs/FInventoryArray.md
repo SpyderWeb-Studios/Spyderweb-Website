@@ -1,6 +1,6 @@
 # `FInventoryArray`
 
-> A **replicated container** for all inventory slots within an [`UInventoryComponentBase`](InventoryComponent.md).
+> A **replicated container** for all inventory slots within an `UInventoryComponentBase`.
 > Handles replication, synchronization, and change tracking via Unreal’s `FFastArraySerializer`.
 
 ---
@@ -10,7 +10,7 @@
 `FInventoryArray` is the **core replicated data structure** used by the Inventory System to manage and synchronize
 item data between the server and connected clients.
 
-It holds a list of [`FInventorySlot`](InventorySlot.md) entries and provides a **custom fast array serializer**
+It holds a list of `FInventorySlot` entries and provides a **custom fast array serializer**
 for efficient delta replication.
 
 ---
@@ -70,8 +70,7 @@ struct TStructOpsTypeTraits<FInventoryArray> : public TStructOpsTypeTraitsBase2<
 
 ## Replication
 
-`FInventoryArray` leverages Unreal Engine’s [`FFastArraySerializer`](https://docs.unrealengine.com/5.3/en-US/API/Runtime/Engine/FFastArraySerializer/)
-for efficient network replication of the inventory’s state.
+`FInventoryArray` leverages Unreal Engine’s `FFastArraySerializer` for efficient network replication of the inventory’s state.
 
 When items are added, removed, or modified, only **changed entries** are sent over the network rather than the entire array.
 
@@ -149,7 +148,7 @@ void FInventoryArray::MarkInventorySlotDirty(
 
 ## Integration
 
-`FInventoryArray` is owned and managed by the [`UInventoryComponentBase`](../Components/InventoryComponent.md),
+`FInventoryArray` is owned and managed by the `UInventoryComponentBase`,
 which uses it for all item storage, replication, and change handling.
 
 ### Relationship Diagram
@@ -197,6 +196,6 @@ When `MarkItemDirty()` is called, Unreal Engine automatically triggers replicati
 * Handles **slot change notifications** and **replication optimization** through `FFastArraySerializer`.
 * Works closely with:
 
-  * [`FInventorySlot`](InventorySlot.md)
-  * [`UInventoryComponentBase`](InventoryComponent.md)
+  * `FInventorySlot`
+  * `UInventoryComponentBase`
 
