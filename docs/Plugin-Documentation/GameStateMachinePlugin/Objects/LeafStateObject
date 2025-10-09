@@ -1,0 +1,44 @@
+
+---
+
+# **ULeafStateObject**
+
+The `ULeafStateObject` represents a terminal state in the state system hierarchy. Unlike `URootStateObject` or nested master states, it cannot contain child states, making it ideal for endpoints, atomic actions, or final stages in a state machine.
+
+This class is fully compatible with the `UStateObject` lifecycle, supporting entry, update, exit, and tick logic, as well as flag-based control and Blueprint events.
+---
+
+## **Key Features**
+
+* **Terminal State:** Cannot have child states; always a leaf in the hierarchy.
+* **Lifecycle Management:** Supports all standard `UStateObject` events: Enter, Update, Exit, Tick.
+* **Event-Driven:** Broadcasts lifecycle events to listeners.
+* **Blueprint Extensible:** Fully usable and extendable in Blueprints.
+* **Flag-Based Control:** Integrates with `EStateFlags` for Active, MarkForEntry, MarkForExit, and Paused states.
+
+---
+
+## **Usage Example**
+
+```cpp
+ULeafStateObject* MyLeafState = NewObject<ULeafStateObject>();
+MyLeafState->Init(SomeOwner);
+MyLeafState->SetStateFlag(static_cast<int32>(EStateFlags::MarkForEntry));
+MyLeafState->EnterState();
+```
+
+* Initialize the leaf state with an owning object.
+* Mark it for entry and activate it using `EnterState()`.
+* All other `UStateObject` functionality (update, exit, tick) is fully supported.
+
+---
+
+## **Behavior**
+
+* **Cannot contain child states:** Any attempt to add internal states should be avoided.
+* **Atomic actions:** Ideal for simple states representing **one discrete behavior** or **end-of-process states**.
+* **Integrates with root/master states:** Can be used as the active terminal state in a `URootStateObject` or `URootStateObject_Tag` system.
+
+## **Summary**
+
+The `ULeafStateObject` is a **terminal, atomic state** in the `UStateObject` hierarchy. It cannot contain child states, making it ideal for **endpoints, single actions, or final stages** in a state machine. Fully compatible with the state system, it supports lifecycle events, flag-based control, and Blueprint extensibility, enabling developers to create **clear, reusable, and modular state logic**.

@@ -17,7 +17,7 @@ Every Spyderweb Studios plugin follows three key principles:
 
 * 🧩 **Modular by Design** — integrate only what you need.
 * ⚙️ **Blueprint Accessible** — no C++ experience required.
-* 🌐 **Multiplayer-Ready** — replicated and authority-safe out of the box.
+* 🌐 **Multiplayer-Ready** — replicated and authority-safe out of the box. (when applicable)
 
 ---
 
@@ -29,21 +29,12 @@ A fully replicated, data-driven inventory system supporting item stacks, transfe
 
 > “Seamless, scalable, multiplayer-ready inventory for Unreal Engine.”
 
-### 🧱 **Item Plugin**
+### ⏱️ **Game State Management Plugin**
 
-Extend the Unreal Object ecosystem with powerful item data models and reusable interfaces. Perfect for authoring modular item behavior, icons, and descriptions.
+A flexible, modular state framework for Unreal Engine, designed for **experiments, global game systems, and environmental control**. Supports **nested states, flag-based transitions, tag queries, and event-driven lifecycle hooks** — fully accessible in Blueprints and easily extensible.
 
-### ⚔️ **Equipment Plugin**
+> “Robust, observable, and reusable state management for any Unreal Engine project.”
 
-Attach, equip, and unequip items with precision. Built on top of the inventory foundation for consistent multiplayer equipment handling.
-
-### 🎯 **Ability Plugin**
-
-Create modular gameplay abilities with cooldowns, conditions, and resource costs — plug-and-play with your inventory or equipment systems.
-
-### 🗺️ **Quest Plugin**
-
-A flexible quest framework supporting objectives, triggers, and state tracking — easy to integrate with any gameplay system.
 
 ---
 
